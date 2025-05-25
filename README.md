@@ -1,6 +1,6 @@
-# 💧 Charity Water – Responsive Donation Website
+# 💧 Charity Water – Responsive Donation Website Landing Page
 
-A fully responsive and animated website designed to support a clean water initiative. The project showcases impactful design, smooth animations, and mobile optimization to engage users and drive donations.
+A fully responsive and animated landing page designed to support a clean water initiative. The project showcases impactful design, smooth animations, and mobile optimization to engage users and drive donations.
 
 ## 📌 Overview
 

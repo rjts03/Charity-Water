@@ -1,0 +1,580 @@
+/* hide mobile‐only elements by default */
+.logo-mobile,
+.hamburger {
+  display: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+.container {
+  width: 1920px;
+  height: 1080px;
+  position: relative;
+  overflow: hidden;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 1080px;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+  animation: gentleWave 20s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+.top-bar {
+  width: 1920px;
+  height: 78px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #092844;
+}
+
+.hero-1 {
+  width: 1109.01px;
+  height: 739.57px;
+  position: absolute;
+  left: 1160.79px;
+  top: 28px;
+  transform: rotate(24deg);
+  transform-origin: top left;
+  border-radius: 10px;
+  animation: floatUpDown 4s ease-in-out infinite;
+  will-change: transform;
+}
+
+.hero-2 {
+  width: 1102.56px;
+  height: 669.01px;
+  position: absolute;
+  left: -123px;
+  top: 590.79px;
+  transform: rotate(-15deg);
+  transform-origin: top left;
+  border-radius: 10px;
+  animation: floatUpDown 4s ease-in-out infinite;
+  will-change: transform;
+}
+
+.headline-1 {
+  position: absolute;
+  left: 80px;
+  top: 136px;
+  color: #FDF7DC;
+  font-size: 110px;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+.headline-2 {
+  position: absolute;
+  left: 80px;
+  top: 240px;
+  color: #F6C600;
+  font-size: 110px;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+.cta-button {
+  width: 242px;
+  height: 50px;
+  position: absolute;
+  left: 940px;
+  top: 407px;
+  background: #F6C600;
+  border-radius: 40px;
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+}
+
+.cta-text {
+  width: 240px;
+  height: 19px;
+  position: absolute;
+  left: 941px;
+  top: 424px;
+  text-align: center;
+  color: #092844;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.description {
+  width: 529px;
+  position: absolute;
+  left: 80px;
+  top: 370px;
+}
+
+.desc-white {
+  color: white;
+  font-size: 25px;
+  font-weight: 400;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.desc-yellow {
+  color: #F6C600;
+  font-size: 25px;
+  font-weight: 400;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.logo {
+  width: 213px;
+  height: 25px;
+  position: absolute;
+  left: 80px;
+  top: 26px;
+}
+
+.nav-item {
+  position: absolute;
+  top: 30px;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.arrow {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 30px;
+}
+
+/* Hover glow for nav items */
+.nav-item:hover {
+  text-shadow: 0 0 10px #F6C600;
+  color: #F6C600;
+  cursor: pointer;
+}
+
+/* CTA clicked state */
+.cta-button.clicked {
+  background: #092844;
+  box-shadow: 0 0 15px #F6C600;
+}
+
+.cta-text.clicked {
+  color: #F6C600;
+  text-shadow: 0 0 8px #F6C600;
+}
+
+/* Flow hover animation on words */
+.flow-heading span {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.flow-heading span:hover {
+  transform: translateY(-6px);
+}
+
+@keyframes floatUpDown1 {
+  0% { transform: rotate(24deg) translateY(0); }
+  50% { transform: rotate(24deg) translateY(-10px); }
+  100% { transform: rotate(24deg) translateY(0); }
+}
+
+@keyframes floatUpDown2 {
+  0% { transform: rotate(-15deg) translateY(0); }
+  50% { transform: rotate(-15deg) translateY(-10px); }
+  100% { transform: rotate(-15deg) translateY(0); }
+}
+
+
+
+.hero-1 {
+  animation: floatUpDown1 4s ease-in-out infinite;
+}
+
+.hero-2 {
+  animation: floatUpDown2 4s ease-in-out infinite;
+}
+
+.nav-link {
+  position: absolute;
+  top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.nav-link:hover .nav-item,
+.nav-link:hover .arrow path {
+  color: #F6C600;
+  fill: #F6C600;
+  text-shadow: 0 0 10px #F6C600;
+  filter: drop-shadow(0 0 6px #F6C600);
+}
+
+/* Glow nav item text */
+.nav-item:hover {
+  text-shadow: 0 0 10px #F6C600;
+  color: #F6C600;
+  cursor: pointer;
+}
+
+/* Glow arrow beside TAKE ACTION */
+.nav-item:hover ~ .arrow:nth-of-type(1) path {
+  fill: #F6C600;
+  filter: drop-shadow(0 0 6px #F6C600);
+}
+
+/* Glow arrow beside ABOUT US */
+.nav-item:hover ~ .arrow:nth-of-type(2) path {
+  fill: #F6C600;
+  filter: drop-shadow(0 0 6px #F6C600);
+}
+
+/* Glow arrow beside WHY WATER ? */
+.nav-item:hover ~ .arrow:nth-of-type(3) path {
+  fill: #F6C600;
+  filter: drop-shadow(0 0 6px #F6C600);
+}
+
+.secondary-cta {
+  position: absolute;
+  top: 570px; /* Slightly below the main CTA */
+  left: 983px; /* Aligned with .cta-text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.secondary-text {
+  color: #C0C0C0;
+  font-size: 18px;
+  font-weight: 400; /* Normal weight */
+  text-decoration: underline;
+  cursor: pointer;
+  text-align: center;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.secondary-text:hover {
+  color: #ffffff;
+  text-shadow: 0 0 6px #ffffff;
+}
+
+.secondary-arrow {
+  width: 18px;
+  height: 18px;
+  margin-top: 5px;
+  transition: filter 0.3s ease;
+}
+
+.secondary-cta:hover .secondary-arrow {
+  filter: drop-shadow(0 0 6px #ffffff);
+}
+
+
+/* === Medium Layout: 1440px breakpoint === */
+@media (max-width: 1440px) {
+  .container {
+    width: 1440px;
+  }
+
+  .background {
+    width: 1920px;
+    height: 1080px;
+    left: -223px;
+    top: 0;
+  }
+
+  .top-bar {
+    width: 1440px;
+  }
+
+  .hero-1 {
+    left: 967.79px;
+    top: 19px;
+  }
+
+  .hero-2 {
+    left: -123px;
+    top: 590.79px;
+  }
+
+  .logo {
+    left: 80px;
+    top: 26px;
+  }
+
+  .headline-1 {
+    left: 80px;
+    top: 136px;
+  }
+
+  .headline-2 {
+    left: 76px;
+    top: 246px;
+  }
+
+  .description {
+    left: 80px;
+    top: 362px;
+    width: 529px;
+  }
+
+  .cta-button {
+    left: 874px;
+    top: 611px;
+  }
+
+  .cta-text {
+    left: 875px;
+    top: 628px;
+  }
+
+  .secondary-cta {
+    left: 917px;
+    top: 680px;
+  }
+}
+
+/* Smooth transitions for layout shifts */
+.hero-1,
+.hero-2,
+.headline-1,
+.headline-2,
+.description,
+.cta-button,
+.cta-text,
+.secondary-cta,
+.logo,
+.hamburger,
+.top-bar,
+.background {
+  transition: left 0.5s ease, top 0.5s ease, width 0.5s ease;
+}
+
+/* ————————————————————————————————————————
+   Small‐layout breakpoint: ≤720px (Your Figma spec)
+   ———————————————————————————————————————— */
+@media (max-width: 720px) {
+
+  /* 1) Kill the desktop float animation and any transform */
+    .hero-1,
+    .hero-2 {
+     animation: none;
+     transform: none;
+    }
+/* mobile float — no rotation */
+    @keyframes floatMobile1 {
+     0%, 100% { transform: translateY(0); }
+     50%      { transform: translateY(-10px); }
+    }
+    @keyframes floatMobile2 {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-10px); }
+    }
+
+  /* container & background */
+  .container {
+    width: 720px;
+    height: 1080px;
+  }
+  .background {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    left: -992px;
+    top: 0;
+    object-fit: none;
+  }
+
+  /* header */
+  .top-bar {
+    width: 720px;
+    height: 78px;
+  }
+
+  /* swap logos & show hamburger */
+  .logo { display: none; }
+  .logo-mobile {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: auto;
+    left: 24px;
+    top: 23px;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left: 657px;
+    top: 26px;
+    cursor: pointer;
+  }
+  /* Hamburger icon rotation */
+.hamburger.rotated {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
+
+.hamburger {
+  transition: transform 0.3s ease;
+}
+
+/* Mobile nav container */
+.mobile-nav {
+  position: absolute;
+  top: 16px;
+  right: 60px;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 18px;
+  background: rgba(9, 40, 68, 0.9);
+  padding: 12px 16px;
+  border-radius: 10px;
+  transform: translateX(150%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+/* When open, slide it in */
+.mobile-nav.open {
+  transform: translateX(0);
+}
+
+/* Style each nav item */
+.mobile-nav-item {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 6px 12px;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav-item:hover {
+  color: #F6C600;
+  text-shadow: 0 0 6px #F6C600;
+}
+
+/* Show only on small screens */
+@media (min-width: 721px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+
+
+  /* hide desktop nav, arrows, secondary CTA */
+  .nav-item,
+  .arrow {
+    display: none;
+  }
+
+  /* hero images */
+  .hero-1 {
+    width: 666px;
+    height: 444px;
+    left: -62px;
+    top: 450px;
+    border-radius: 6px;
+  }
+  .hero-2 {
+    width: 666px;
+    height: 444px;
+    left: 174px;
+    top: 700px;
+    border-radius: 6px;
+    box-shadow: 5px -7px 5.2px rgba(0, 0, 0, 0.25);
+  }
+  
+  /*Reapply the animation*/
+  .hero-1{animation: floatMobile1 4s ease-in-out infinite}
+  .hero-2{animation: floatMobile2 3s ease-in-out infinite}
+  
+  /* headlines */
+  .headline-1 {
+    width: 310px;
+    height: 233px;
+    left: 45px;
+    top: 124px;
+    font-size: 70px;
+  }
+  .headline-2 {
+    width: 325px;
+    height: 233px;
+    left: 279px;
+    top: 127px;
+    font-size: 70px;
+  }
+
+  /* description text */
+  .description {
+    left: 44px;
+    top: 360px;
+    width: 619px;
+  }
+  .desc-white,
+  .desc-yellow {
+    font-size: 20px;
+  }
+
+  /* primary CTA */
+  .cta-button {
+    width: 232px;
+    height: 48px;
+    left: 400px;
+    top: 483px;
+  }
+  .cta-text {
+    width: 240px;
+    height: 19px;
+    left: 396px;
+    top: 500px;
+    font-size: 18px;
+  }
+
+  /* Show and reposition secondary CTA on mobile */
+.secondary-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 560px; /* adjust as needed for spacing */
+  left: 450px; /* align under CTA, tweak if needed */
+}
+
+.secondary-text {
+  color: #C0C0C0;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: underline;
+  cursor: pointer;
+  text-align: center;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.secondary-arrow {
+  width: 18px;
+  height: 18px;
+  margin-top: 5px;
+  transition: filter 0.3s ease;
+}
+
+.secondary-cta:hover .secondary-arrow {
+  filter: drop-shadow(0 0 6px #ffffff);
+}
+
+}
+
+

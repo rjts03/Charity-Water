@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Code Preview</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <img class="background" src="Images/Background.png" alt="Background" />
+    <div class="top-bar"></div>
+
+    <!-- Hero Images -->
+    <img class="hero-1" src="Images/HeroImage_1.jpg" alt="Hero 1" />
+    <img class="hero-2" src="Images/HeroImage_2.jpg" alt="Hero 2" />
+
+    <!-- Text Content -->
+    <div class="headline-1 flow-heading">
+      <span>Back</span> <span>Real</span> <span>Impact.</span>
+    </div>
+    <div class="headline-2 flow-heading">
+      <span>Bring</span> <span>Real</span> <span>Change</span> <span>!</span>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-button"></div>
+    <div class="cta-text">START DONATING TODAY</div>
+    
+   <!-- Secondary CTA -->
+    <div class="secondary-cta">
+      <div class="secondary-text">Explore Life Stories</div>
+      <svg class="secondary-arrow" viewBox="0 0 24 24">
+       <path d="M12 5v14M5 12l7 7 7-7" stroke="#C0C0C0" stroke-width="2" fill="none"/>
+      </svg>
+    </div>
+
+
+    <!-- Description -->
+    <div class="description">
+      <span class="desc-white">
+        100% of your donations directly power field led projects — with verified progress, transparent data and updates from the communities that 
+      </span>
+      <span class="desc-yellow">YOU ARE IMPACTING.</span>
+    </div>
+
+    <!-- Logo -->
+    <img class="logo" src="Images/Logo.png" alt="Logo" />
+    <!-- Mobile logo (hidden by default) -->
+     <img class="logo-mobile" src="Images/Logo_mobile.png" alt="Mobile Logo" />
+
+     <!-- Hamburger icon (hidden by default) -->
+     <img class="hamburger" src="Images/Menu.png" alt="Menu Icon" />
+
+    <!-- Add this just below the hamburger image -->
+    <div class="mobile-nav">
+      <div class="mobile-nav-item">TAKE ACTION</div>
+      <div class="mobile-nav-item">ABOUT US</div>
+      <div class="mobile-nav-item">WHY WATER ?</div>
+    </div>
+
+    <!-- Navigation Items -->
+    <div class="nav-item" style="left: 440px;">TAKE ACTION</div>
+    <div class="nav-item" style="left: 699px;">ABOUT US</div>
+    <div class="nav-item" style="left: 934px;">WHY WATER ?</div>
+
+    <!-- Arrows -->
+    <svg class="arrow" style="left: 552px;" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z" fill="white"/></svg>
+    <svg class="arrow" style="left: 787px;" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z" fill="white"/></svg>
+    <svg class="arrow" style="left: 1049px;" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z" fill="white"/></svg>
+  </div>
+  <script>
+  const ctaButton = document.querySelector('.cta-button');
+  const ctaText = document.querySelector('.cta-text');
+
+  function toggleCTAColors() {
+    ctaButton.classList.add('clicked');
+    ctaText.classList.add('clicked');
+
+    // Punchier feel: shorter effect
+    setTimeout(() => {
+      ctaButton.classList.remove('clicked');
+      ctaText.classList.remove('clicked');
+    }, 350);
+  }
+
+  ctaButton.addEventListener('click', toggleCTAColors);
+  ctaText.addEventListener('click', toggleCTAColors);
+</script>
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const mobileNav = document.querySelector('.mobile-nav');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('rotated');
+    mobileNav.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>
